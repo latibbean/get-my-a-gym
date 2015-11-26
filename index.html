@@ -329,29 +329,22 @@ reset Map</button>
 						//map.setView([iGym.latitude, iGym.longitude], 10);
 					});
 
-				$lGymPanel.append("__tag_358$33_");
-				var $lGymPanelSub = $("#ListOfGyms div").last().attr("id",
-						iGym.Gym + "_3").addClass("row").addClass("padall");
-
-				$lGymPanelSub.append("__tag_361$36_");
-				var $lGymPanelSub2 = $("#ListOfGyms div").last().attr("id",
-						iGym.Gym + "_4").addClass("col-xs-12").addClass(
-						"col-sm-12").addClass("col-md-12")
-						.addClass("col-lg-12");
-
-				$lGymPanelSub2.append("__tag_364$37_");
-				var $lGymPanel21 = $("#ListOfGyms div").last().attr("id",
-						iGym.Gym + "_5").addClass("clearfix").append(
-						"__tag_365$118_");//.addClass("pull-left");
-
-				// Adding Name
-				$lGymPanel21.append("__tag_368$35_");
-				$("#ListOfGyms div").last().addClass("icon").text(iGym.Gym);
-
-				//Adding PostCode
-				console.log(iGym);
-				$lGymPanel21.append("__tag_372$35_");
-				$("#ListOfGyms div").last().addClass("pull-right").text(iGym.PostCode);
+				 	            $lGymPanel.append("<div>");
+ 	            var $lGymPanelSub =  $("#ListOfGyms div").last().attr("id", iGym.Gym + "_3").addClass("row").addClass("padall");
+ 	
+ 	            $lGymPanelSub.append("<div>");
+ 	            var $lGymPanelSub2 = $("#ListOfGyms div").last().attr("id", iGym.Gym + "_4").addClass("col-xs-12").addClass("col-sm-12").addClass("col-md-12").addClass("col-lg-12");
+ 	
+ 	            $lGymPanelSub2.append("<div>");
+ 	            var $lGymPanel21 = $("#ListOfGyms div").last().attr("id", iGym.Gym + "_5").addClass("clearfix").append("<div>");//.addClass("pull-left");
+ 	
+ 	            // Adding Name
+ 	            $lGymPanel21.append("<span>");
+ 	            $("#ListOfGyms div").last().addClass("icon").text(iGym.Gym);
+ 	
+ 	            //Adding PostCode
+ 	            $lGymPanel21.append("<div>");
+ 	            $("#ListOfGyms div").last().addClass("pull-right").text(iGym.PostCode);
 			}
 		}
 	}
