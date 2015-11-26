@@ -282,16 +282,15 @@ reset Map</button>
 			} else {
 				mGymsInList.push(iGym.Gym);
 
-				$("#ListOfGyms").append("__tag_338$39_");
-				var $lGymLine = $("#ListOfGyms div").last();
-				$lGymLine.attr("id", iGym.Gym + "_1").addClass("col-xs-12")
-						.addClass("col-sm-12").addClass("col-md-12 col-lg-12");
-
-				$lGymLine.append("__tag_343$32_")
-				var $lGymPanel = $("#ListOfGyms div").last();
-				//console.log($lGymPanel);
-				$lGymPanel.attr("id", iGym.Gym + "_2").addClass("panel")
-						.addClass("panel-default");
+			$("#ListOfGyms").append("<div>");
+ 	            var $lGymLine = $("#ListOfGyms div").last();
+ 	            $lGymLine.attr("id", iGym.Gym + "_1").addClass("col-xs-12").addClass("col-sm-12").addClass("col-md-12 col-lg-12");
+ 	            
+ 	            
+ 	            $lGymLine.append("<div>")
+ 	            var $lGymPanel = $("#ListOfGyms div").last();
+ 	            //console.log($lGymPanel);
+ 	            $lGymPanel.attr("id", iGym.Gym + "_2").addClass("panel").addClass("panel-default");
 				$lGymPanel.bind("click", function() {
 					//alert( "User clicked on: " + iGym.gym);
 						// 	                init_map_adress(iGym.Address);
