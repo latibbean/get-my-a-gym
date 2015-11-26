@@ -195,15 +195,14 @@ reset Map</button>
 
 	var mGymsInList = [];
 
-	L
-			.tileLayer(
-					'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}',
-					{
-						maxZoom : 18,
-						attribution : 'Map data &copy; __tag_272$42_OpenStreetMap__tag_272$90_ contributors, ' + '__tag_273$13_CC-BY-SA__tag_273$78_, ' + 'Imagery © __tag_274$23_Mapbox__tag_274$57_',
-						id : 'latibbean.lgg1j91f',
-						accessToken : 'pk.eyJ1IjoibGF0aWJiZWFuIiwiYSI6IlgtVWVKWXcifQ.1pwTsR0qN4DqOZHciOUFdA'
-					}).addTo(map);
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+            maxZoom: 18,
+            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+            '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+            'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+            id: 'latibbean.lgg1j91f',
+            accessToken: 'pk.eyJ1IjoibGF0aWJiZWFuIiwiYSI6IlgtVWVKWXcifQ.1pwTsR0qN4DqOZHciOUFdA'
+        }).addTo(map);
 
 	var markers = new L.FeatureGroup();
 
@@ -236,44 +235,24 @@ reset Map</button>
 
 		map.removeLayer(markers);
 		markers.clearLayers();
+    	 $.each( data, function( i, item ) {
+ 			if (item.Court=='Beach') {
+ 				if ($('#rdBeach').prop('checked')==true) {
+ 					var lMarker = L.marker([item.latitude, item.longitude], {icon:volleyBeachIcon})//.addTo(map)
+             			.bindPopup("<b>" + item.Gym + "</b><br />" + item.Address+ "</b><br />" + item.Court + "</b><br />" + item.Info); 
+ 	        		markers.addLayer(lMarker);
+ 	    			addGymToPage(item, i);           
+ 		        }
+ 			} else if (item.Court=='Indoor') {
+ 				if ($('#rdIndoor').prop('checked')==true) {
+ 					var lMarker = L.marker([item.latitude, item.longitude], {icon:volleyIcon})//.addTo(map)
+         				.bindPopup("<b>" + item.Gym + "</b><br />" + item.Address+ "</b><br />" + item.Court + "</b><br />" + item.Info); 
+ 					markers.addLayer(lMarker);
+ 	 	    		addGymToPage(item, i);           
+      			}
+ 			}
+       	});
 
-		$.each(data, function(i, item) {
-			if (item.Court == 'Beach') {
-				if ($('#rdBeach').prop('checked') == true) {
-					var lMarker = L.marker( [ item.latitude, item.longitude ],
-							{
-								icon : volleyBeachIcon
-							})//.addTo(map)
-							.bindPopup(
-									"__tag_317$28_" + item.Gym
-											+ "__tag_317$47_<br />"
-											+ item.Address
-											+ "__tag_317$76_<br />"
-											+ item.Court
-											+ "__tag_317$104_<br />"
-											+ item.Info);
-					markers.addLayer(lMarker);
-					addGymToPage(item, i);
-				}
-			} else if (item.Court == 'Indoor') {
-				if ($('#rdIndoor').prop('checked') == true) {
-					var lMarker = L.marker( [ item.latitude, item.longitude ],
-							{
-								icon : volleyIcon
-							})//.addTo(map)
-							.bindPopup(
-									"__tag_324$25_" + item.Gym
-											+ "__tag_324$44_<br />"
-											+ item.Address
-											+ "__tag_324$73_<br />"
-											+ item.Court
-											+ "__tag_324$101_<br />"
-											+ item.Info);
-					markers.addLayer(lMarker);
-					addGymToPage(item, i);
-				}
-			}
-		});
 		map.addLayer(markers);
 
 		function addGymToPage(iGym, i) {
