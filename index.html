@@ -122,18 +122,11 @@ reset Map</button>
 </div>
 
 <script>
-
     $('#resetButton').click(function () {
-
         console.log('reset map zoom');
         var latLondon  = 51.5286416;
         var lngLondon  = -0.1015987;
-//console.log(
         map.setView((new L.LatLng(latLondon, lngLondon)), 10);
-        //console.log($(this));
-        //$(this).button('loading');
-
-
 		resetMap();
     });
 
@@ -206,9 +199,6 @@ reset Map</button>
 		//Do nothing here?
 		}).done(function(data) {
 		// data is a JavaScript object now. Handle it as such
-
-			//console.log(mAddresses.length);
-
 			function compareGymName(a, b) {
 				if (a.Gym < b.Gym)
 					return -1;
@@ -219,8 +209,6 @@ reset Map</button>
 			data.sort(compareGymName);
 			myData = data;
 			resetMap();
-
-			//console.log("end");
 		});
 
 	function resetMap() {
@@ -294,6 +282,10 @@ reset Map</button>
  	            //Adding PostCode
  	            $lGymPanel21.append("<div>");
  	            $("#ListOfGyms div").last().addClass("pull-right").text(iGym.PostCode);
+
+ 	            //Adding Area
+ 	            $lGymPanel21.append("<div>");
+ 	            $("#ListOfGyms div").last().addClass("pull-left").text(iGym.Area);
 			}
 		}
 	}
