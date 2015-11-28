@@ -180,7 +180,7 @@
     "Region": "Bexley",
     "PostCode": "DA6 7AB",
     "Gender": "Men",
-    "Address": "Road Bexleyheath Kent",
+    "Address": "Townley Road, Bexleyheath",
     "longitude": 0.1406154,
     "Info": "Known club using the venue: Bexley Volleyball Club",
     "latitude": 51.4503105,
@@ -556,22 +556,6 @@
     "longitude": -0.2074662,
     "Info": "Known club using the venue: Putney Volleyball Club",
     "latitude": 51.45644249999999,
-    "Court": "Indoor"
-  },
-  {
-    "Gym": "Chestnut Grove School XXXXXXXXXX",
-    "Area": "London",
-    "adr_raw": "Chestnut Grove School 45 Chestnut Grove Balham London SW12 8JZ",
-    "Team": "Men",
-    "Club": "Putney Volleyball Club - Teams",
-    "logourl": "",
-    "Region": "Wandsworth",
-    "PostCode": "SW12 8JZ",
-    "Gender": "Men",
-    "Address": "Chestnut Grove",
-    "longitude": -0.15398,
-    "Info": "Mens team training Tuesdays 19:15 (2 hours) each week with an excellent coach. Ladies training Thursdays 19:30 (2 hours) each week with an excellent coach. Summer Boot Camp Mixed volleyball sessions - Thursdays 19:30 (2 hours). We have an excellent coach from Brazil. These sessions are for our own players and for potential players for our teams.",
-    "latitude": 51.443951,
     "Court": "Indoor"
   },
   {
