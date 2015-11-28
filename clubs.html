@@ -1,0 +1,833 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+
+original layout: http://w3layouts.com/peculiar-a-personal-portfolios-flat-bootstrap-responsive-web-template/
+quotes: http://mandyms.hubpages.com/hub/100-Inspiring-volleyball-quotes
+maps optsion: http://www.rocketmill.co.uk/the-adding-markers-google-maps-tutorial
+maps infowindows: https://developers.google.com/maps/documentation/javascript/examples/infowindow-simple
+bootstrap buttons: http://getbootstrap.com/javascript/#buttons
+bootstrap maps template: http://www.prepbootstrap.com/bootstrap-template/real-estate-list-map-dynamic
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>London Volleyball</title>
+<link rel="icon" 
+      type="image/png" 
+      href="http://static.wixstatic.com/media/1f7ec8_ba4d603f2e0147cfb9725c6bb22600cd.png_srz_42_43_85_22_0.50_1.20_0.00_png_srz">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<script src="js/jquery-1.11.0.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<!---- start-smoth-scrolling---->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+console.log("starting index page of volleybal locations");
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+
+<!--start-smoth-scrolling-->
+<!--animated-css-->
+		<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+		<script src="js/wow.min.js"></script>
+		<script>
+		 new WOW().init();
+		</script>
+<!--animated-css-->  
+</head>
+<body>
+	<!--start-banner-->
+		<div class="banner" id="home">
+			<div  id="top" class="callbacks_container">
+			     <ul class="rslides" id="slider4">
+			       <li>
+	    				<div class="banner-1">
+						</div>
+					</li>
+					 <li>
+	    				<div class="banner-2">
+						</div>
+					</li>
+					 <li>
+	    				<div class="banner-3">
+						</div>
+					</li>
+			     </ul>
+			</div>
+			<div class="clearfix"> </div>
+			<div class="header">
+				<!--div class="logo">
+					<a href="index.html"><img src="images/indoor.png" alt=""></a>
+				</div-->
+				<div class="navigation">
+				 <span class="menu"></span> 
+					<ul class="navig">
+						<!--li><a>Looking for Volleyball</a><span>|</span></li-->
+						<li><a href="#clubs" class="scroll">Looking for VOLLEYBALL TODAY</a><span>|</span></li>
+						<!--li><a href="gym.html">GYM or BEACH</a><span>|</span></li-->
+						<li><a href="about.html">ABOUT</a></li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<!--div class="banner-bottom">
+				<ul>
+					<li><a href="#"><span class="twt"> </span></a></li>
+					<li><a href="#"><span class="t"> </span></a></li>
+					<li><a href="#"><span class="g"> </span></a></li>
+				</ul>
+			</div-->
+		</div>	
+	<!-- script-for-menu -->
+		 <script>
+				$("span.menu").click(function(){
+					$(" ul.navig").slideToggle("slow" , function(){
+					});
+				});
+		 </script>
+		 <!-- script-for-menu -->
+		<!--Slider-Starts-Here-->
+				<script src="js/responsiveslides.min.js"></script>
+			 <script>
+			    // You can also use "$(window).load(function() {"
+			    $(function () {
+			      // Slideshow 4
+			      $("#slider4").responsiveSlides({
+			        auto: true,
+			        pager: false,
+			        nav: true,
+			        speed: 500,
+			        namespace: "callbacks",
+			        before: function () {
+			          $('.events').append("<li>before event fired.</li>");
+			        },
+			        after: function () {
+			          $('.events').append("<li>after event fired.</li>");
+			        }
+			      });
+			
+			    });
+			  </script>
+			<!--End-slider-script-->
+	<!--end-banner-->	
+	<!--start-free-->	 
+	<div class="free wow bounce" data-wow-delay="0.1s">
+		<div class="container">
+			<div class="free-main">
+				<h1>Rules we live by</h1>
+				<p><sup><img src="images/quote-1.png" alt=""></sup> Luck is what happens when preparation meets opportunity. <sub><img src="images/quote-2.png" alt=""></sub> </p>
+			</div>
+		</div>
+	</div>
+
+<div class="container" id="clubs" name="clubs">
+	<div class="padall" style="text-align: center">
+		<div class="btn-group padall" data-toggle="buttons">
+	  		<label class="btn btn-primary btn-filter active">
+	    		<input class="btn-filter" type="checkbox" autocomplete="off" id="rdIndoor" checked="true"> Indoor
+	  		</label>
+	  		<label class="btn btn-primary btn-filter">
+	    		<input class="btn-filter" type="checkbox" autocomplete="off" id="rdBeach"> Beach
+	  		</label>
+		</div>
+		<div class="btn-group padall" data-toggle="buttons">
+	  		<label class="btn btn-primary btn-filter active">
+	    		<input type="checkbox" autocomplete="off" id="rdMen" checked="true"> Men
+	  		</label>
+	  		<label class="btn btn-primary btn-filter">
+	    		<input  type="checkbox" autocomplete="off" id="rdWomen"> Women
+	  		</label>
+	  		<label class="btn btn-primary btn-filter">
+	    		<input type="checkbox" autocomplete="off" id="rdMixed"> Mixed
+	  		</label>
+		</div>
+		<div class="btn-group padall" data-toggle="buttons">
+	  		<label class="btn btn-primary btn-filter">
+	    		<input class="btn-filter" type="checkbox" autocomplete="off" id="rdNational"> National
+	  		</label>
+	  		<label class="btn btn-primary btn-filter">
+	    		<input class="btn-filter" type="checkbox" autocomplete="off" id="rdPremier"> Premier
+	  		</label>
+	  		<label class="btn btn-primary btn-filter active">
+	    		<input class="btn-filter" type="checkbox" autocomplete="off" id="rdDiv1" checked="true"> Div 1
+	  		</label>
+	  		<label class="btn btn-primary btn-filter">
+	    		<input class="btn-filter" type="checkbox" autocomplete="off" id="rdDiv2"> Div 2
+	  		</label>
+	  		<label class="btn btn-primary btn-filter">
+	    		<input class="btn-filter" type="checkbox" autocomplete="off" id="rdSocial"> Social
+	  		</label>
+		</div>	
+
+	<div  class="padall">
+		<div class="btn-group btn-filter " data-toggle="buttons">
+	  		<label class="btn btn-primary btn-filter active">
+	    		<input class="btn-filter" type="checkbox" autocomplete="off"  checked="true" id="rdMonday"> Monday
+	  		</label>
+	  		<label class="btn btn-primary btn-filter active">
+	    		<input class="btn-filter" type="checkbox" autocomplete="off" checked="true" id="rdTuesday"> Tuesday
+	  		</label>
+	  		<label class="btn btn-primary btn-filter active">
+	    		<input class="btn-filter" type="checkbox" autocomplete="off" checked="true" id="rdWednesday"> Wednesday
+	  		</label>
+	  		<label class="btn btn-primary btn-filter active">
+	    		<input class="btn-filter" type="checkbox" autocomplete="off" checked="true" id="rdThursday"> Thursday
+	  		</label>
+	  		<label class="btn btn-primary btn-filter active">
+	    		<input class="btn-filter" type="checkbox" autocomplete="off" checked="true" id="rdFriday"> Friday
+	  		</label>
+	  		<label class="btn btn-primary btn-filter active">
+	    		<input class="btn-filter" type="checkbox" autocomplete="off" checked="true" id="rdSaturday"> Saturday
+	  		</label>
+	  		<label class="btn btn-primary btn-filter active">
+	    		<input class="btn-filter" type="checkbox" autocomplete="off" checked="true" id="rdSunday"> Sunday
+	  		</label>
+		</div>	
+
+		<div class="btn-group padall" data-toggle="buttons">
+	  		<label class="btn btn-primary btn-filter">
+	    		<input class="btn-filter" type="checkbox" id="rdOtherGyms" checked="false"> Other Gyms
+	  		</label>
+		</div>
+
+		<div class="btn-group padbig" data-toggle="buttons">
+			<button type="button" id="resetButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">
+  				Reset filters
+			</button>
+		</div>
+
+	</div>
+
+<script>
+
+	$('.btn-filter').click(function () {
+		// console.log('filter button');
+		loadDataInitPage();
+
+		if ($(this).children().first().attr('id') == 'rdOtherGyms') {
+			if ($('#rdIndoor').attr('disabled') == 'disabled') {
+				 $('.btn-filter').removeAttr('disabled');
+				 $('#resetButton').removeAttr('disabled');
+			} else {
+				 $('.btn-filter').attr('disabled','disabled');
+				 $('#resetButton').attr('disabled','disabled');
+			}
+//			$('#rdOtherGyms').removeAttr('disabled');
+			$('#rdOtherGyms').parent().removeAttr('disabled');
+		}
+
+	  });
+
+	function resetData() {
+	    // console.log('Indoor: ' + $('#rdIndoor').prop('checked'));
+	    // console.log('Beach: ' + $('#rdBeach').prop('checked'));
+	
+	    //$(this).button('loading');
+	    var btn = $(this).button('loading');
+	    // business logic...
+	    
+	    $('#rdIndoor').prop('checked', true);
+	    $('#rdBeach').prop('checked', true);
+	    $('#rdMen').prop('checked', true);
+	    $('#rdWomen').prop('checked', true);
+	  	$('#rdMixed').prop('checked', true);
+  		$('#rdPremier').prop('checked', true);
+  		$('#rdDiv1').prop('checked', true);
+  		$('#rdDiv2').prop('checked', true);
+  		$('#rdSocial').prop('checked', true);
+
+  		$('#rdNational').prop('checked', false);
+
+	    $('#rdIndoor').parent().addClass('active');
+	    $('#rdBeach').parent().addClass('active');
+	    $('#rdMen').parent().addClass('active');
+	    $('#rdWomen').parent().addClass('active');
+	  	$('#rdMixed').parent().addClass('active');
+  		$('#rdPremier').parent().addClass('active');
+  		$('#rdDiv1').parent().addClass('active');
+  		$('#rdDiv2').parent().addClass('active');
+  		$('#rdSocial').parent().addClass('active');
+
+  		$('#rdNational').removeClass('active');
+
+  		loadDataInitPage();
+  		
+	    setTimeout(function() {
+			btn.button('reset');
+	    }, 1500);
+	    //console.log('finished resetting');
+	}
+
+	$('#resetButton').click(function () {
+		resetData();
+	 });
+
+function filterData(data) {	
+	var mFilteredData = [];
+	$.each( data, function( i, item ) {
+		var lKeep = true;
+    	//Check Court:
+    	if ((item.Court == 'Indoor') & $('#rdIndoor').prop('checked')==false) {
+    		lKeep = false;
+    	}
+    	if ((item.Court == 'Beach') & $('#rdBeach').prop('checked')==false) {
+    		lKeep = false;
+    	}
+
+    	// Check Gender
+    	if ((item.Gender == 'Men') & $('#rdMen').prop('checked')==false) {
+    		lKeep = false;
+    	}
+    	if ((item.Gender == 'Women') & $('#rdWomen').prop('checked')==false) {
+    		lKeep = false;
+    	}
+    	if ((item.Gender == 'Mixed') & $('#rdMixed').prop('checked')==false) {
+    		lKeep = false;
+    	}
+    	
+    	if ((item.Competition == 'National') & $('#rdNational').prop('checked')==false) {
+    		lKeep = false;
+    	}
+    	if ((item.Competition == 'Premier') & $('#rdPremier').prop('checked')==false) {
+    		lKeep = false;
+    	}
+    	if ((item.Competition == 'Div 1') & $('#rdDiv1').prop('checked')==false) {
+    		lKeep = false;
+    	}
+    	if ((item.Competition == 'Div 2') & $('#rdDiv2').prop('checked')==false) {
+    		lKeep = false;
+    	}
+    	if ((item.Competition == 'Social') & $('#rdSocial').prop('checked')==false) {
+    		lKeep = false;
+    	}
+
+    	if (item.Trainings) {
+    	
+	    	//console.log('Training Sessions')
+	    	//console.log(item.Trainings);
+	
+	    	//Date
+	    	if (	  $('#rdMonday').prop('checked')==true 
+	    	    	& $('#rdTuesday').prop('checked')==true 
+	    	    	& $('#rdWednesday').prop('checked')==true
+	    	    	& $('#rdThursday').prop('checked')==true 
+	    	    	& $('#rdFriday').prop('checked')==true
+	    	    	& $('#rdSaturday').prop('checked')==true
+	    	    	& $('#rdSunday').prop('checked')==true) {
+	    		// lKeep = true;
+	    	} else {
+	    		if ((	  ((typeof item.Trainings.Monday != 'undefined') & item.Trainings.Monday != ''   	& $('#rdMonday').prop('checked')==true)
+		  	    		| ((typeof item.Trainings.Tuesday != 'undefined') &  item.Trainings.Tuesday != ''  	& $('#rdTuesday').prop('checked')==true)
+		  	    		| ((typeof item.Trainings.Wednesday != 'undefined') &  item.Trainings.Wednesday != '' & $('#rdWednesday').prop('checked')==true)
+		  	    		| ((typeof item.Trainings.Thursday != 'undefined') &  item.Trainings.Thursday != ''  & $('#rdThursday').prop('checked')==true)
+		  	    		| ((typeof item.Trainings.Friday != 'undefined') &  item.Trainings.Friday != ''  	& $('#rdFriday').prop('checked')==true)
+		  	    		| ((typeof item.Trainings.Saturday != 'undefined') &  item.Trainings.Saturday != ''  & $('#rdSaturday').prop('checked')==true)
+		  	    		| ((typeof item.Trainings.Sunday != 'undefined') &  item.Trainings.Sunday != ''  	& $('#rdSunday').prop('checked')==true)
+			    	) == false) {
+		  			lKeep = false;
+	  			}
+	    	}
+    	}
+
+    	// By default the values is not read properly
+    	var lDisabled = $('#rdIndoor').attr('disabled');
+    	if (typeof lDisabled !==  'undefined' && lDisabled !== false) {
+   			$('#rdOtherGyms').prop('checked', true);
+	   	} else {
+   			$('#rdOtherGyms').prop('checked', false);
+		}
+
+    	if ($('#rdOtherGyms').prop('checked')==true) {
+        	if (item.Club == '') {
+        		lKeep = true;
+        	} else {
+        		lKeep = false;
+        	}
+    	} else {
+        	if (item.Club == '') {
+        		lKeep = false;
+        	}
+    	}
+
+    	
+    	if (lKeep) {
+    		mFilteredData.push(item);
+    	}
+  	});
+  	// console.log('Initial size: ' + data.length + ', filtered size: ' + mFilteredData.length);
+	return mFilteredData;
+}
+
+</script>
+ <div class="row padbig">
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="row">
+                <div id="map" class="map" style="height: 600px">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 " style="height:600px ; overflow: scroll" id="ListOfGyms">
+            
+        </div>
+
+    </div>
+
+<script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobubble/src/infobubble.js"></script>
+
+<script type="text/javascript">
+var mTeams;
+var latLondon = 51.5286416;
+var lngLondon = -0.1015987;
+var myLondonLocation = new google.maps.LatLng(latLondon, lngLondon);
+var mapOptions = {
+    center: myLondonLocation,
+    zoom: 10
+};
+
+function loadDataInitPage() {
+
+    //console.log(">> loadDataInitPage <<");
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+    $.getJSON("teams.json", function(data) {
+        //Do nothing here?
+    }).done(function(data) {
+        //console.log(">> data loaded <<");
+
+        // data is a JavaScript object now. Handle it as such
+        mTeams = data;
+
+        //resetData();
+
+        var lFilteredData = filterData(mTeams);
+        // console.log(lFilteredData);
+        initPage(lFilteredData);
+
+        //console.log(">> data loaded - completed <<");
+    });
+};
+
+//loadDataInitPage();
+resetData();
+
+function initPage(iTeams) {
+    //console.log(">> initPage <<");
+    //console.log(iTeams);
+    if (iTeams == undefined) {
+        return;
+    }
+    var lClubsInList = [];
+
+    function compareClubTeamName(a, b) {
+        if ((a.Club + '-' + a.Team) < (b.Club + '-' + b.Team))
+            return -1;
+        if ((a.Club + '-' + a.Team) > (b.Club + '-' + b.Team))
+            return 1;
+        return 0;
+    }
+    iTeams.sort(compareClubTeamName);
+    //console.log(" teams sorted ");
+
+    $("#ListOfGyms").empty();
+    addHeader(iTeams);
+    $.each(iTeams, function(i, item) {
+        //Add Team to list of teams
+        addTeamToPage(item, i, lClubsInList);
+    });
+    //console.log(" going to add teams ");
+
+    //console.log('Adding ' + iTeams.length + ' teams');
+    addTeamsToMap(iTeams);
+
+    //console.log(">> initPage - completed <<");
+}
+
+function addHeader(iTeams) {
+
+    //console.log(">> addHeader <<");
+    $("#ListOfGyms").append("<div>");
+    $("#ListOfGyms div").last().addClass("row");
+    $("#ListOfGyms div").append("<div>");
+    $("#ListOfGyms div").last().addClass("col-xs-12 col-sm-12 col-md-12 col-lg-12");
+
+
+    $("#ListOfGyms div").last().append("<div>")
+    $("#ListOfGyms div").last().addClass("panel").addClass("panel-default");
+
+    $("#ListOfGyms div").last().append("<div>");
+    $("#ListOfGyms div").last().addClass("row").addClass("padall");
+
+    $("#ListOfGyms div").last().append("<div>");
+    $("#ListOfGyms div").last().addClass("col-xs-12 col-sm-12 col-md-3 col-lg-3");
+    // $("#ListOfGyms div").last().append("<img src=\"" + iTeam.logourl + "\">");
+
+    $("#ListOfGyms div").last().parent().last().append("<div>");
+    $("#ListOfGyms div").last().addClass("col-xs-12 col-sm-12 col-md-9 col-lg-9");
+    $("#ListOfGyms div").last().append("<div>");
+    $("#ListOfGyms div").last().addClass("clearfix").append("<div>")
+    $("#ListOfGyms div").last().addClass("pull-left");
+
+    // Adding Name
+    $("#ListOfGyms div").last().parent().last().append("<div>");
+    $("#ListOfGyms div").last().addClass("pull-right");
+    $("#ListOfGyms div").last().text("Number of Teams found: " + iTeams.length);
+
+    $("#ListOfGyms div").last().parent().last().parent().append("<div>");
+
+    // $("#ListOfGyms div").last().append("<h4><span class=\"fa fa-map-marker icon\"></span>"
+    //		+ iTeam.club + ' - ' + iTeam.team + "</h4>" + iTeam.adr
+    //		+ "<span class=\"fa fa-lock icon pull-right\">   Open</span>");
+
+}
+
+function addTeamToPage(iTeam, i, iClubsInList) {
+
+    //console.log(">> addTeamToPage [" + iTeam.Team + "] <<");
+    if ($.inArray(iTeam.Club + ' - ' + iTeam.Team, iClubsInList) >= 0) {
+        //console.log(">> club already in");
+        return;
+    } else {
+        // console.log(iTeam.club + ' - ' + iTeam.team);
+        iClubsInList.push(iTeam.Club + ' - ' + iTeam.Team);
+
+        $("#ListOfGyms").last().append("<div>");
+        $("#ListOfGyms div").last().addClass("row");
+        $("#ListOfGyms div").last().append("<div>");
+        $("#ListOfGyms div").last().addClass("col-xs-12 col-sm-12 col-md-12 col-lg-12");
+
+
+        $("#ListOfGyms div").last().append("<div>")
+
+        $("#ListOfGyms div").last().addClass("panel").addClass("panel-default");
+        $("#ListOfGyms div").last().bind("click", function() {
+            //alert( "User clicked on: " + iTeam.gym);
+            addToMap(iTeam);
+        });
+
+        $("#ListOfGyms div").last().append("<div>");
+        $("#ListOfGyms div").last().addClass("row").addClass("padall");
+
+        $("#ListOfGyms div").last().append("<div>");
+        $("#ListOfGyms div").last().addClass("col-xs-12 col-sm-12 col-md-3 col-lg-3");
+        if (iTeam.logourl == "") {
+            $("#ListOfGyms div").last().append("<img src=\"http://www.sportfactor.net/v/vspfiles/photos/MVA200-2.jpg\">");
+        } else {
+            $("#ListOfGyms div").last().append("<img src=\"" + iTeam.logourl + "\">");
+        }
+
+        $("#ListOfGyms div").last().parent().last().append("<div>");
+        $("#ListOfGyms div").last().addClass("col-xs-12 col-sm-12 col-md-9 col-lg-9");
+        $("#ListOfGyms div").last().append("<div>");
+        $("#ListOfGyms div").last().addClass("clearfix").append("<div>")
+        $("#ListOfGyms div").last().addClass("pull-left");
+
+        // Adding Name
+        $("#ListOfGyms div").last().parent().last().append("<div>");
+        $("#ListOfGyms div").last().addClass("pull-right");
+        if (iTeam.Competition == '') {
+            $("#ListOfGyms div").last().text(iTeam.Court);
+        } else {
+            $("#ListOfGyms div").last().text(iTeam.Competition + " | " + iTeam.Gender + " | " + iTeam.Court);
+        }
+
+        //$("#ListOfGyms div").last().parent().last().parent().append("<div>");
+        if (iTeam.Club == '') {
+            $("#ListOfGyms div").last().append("<h4><span class=\"fa fa-map-marker icon\"></span>" + iTeam.Team + "</h4>" + iTeam.Gym + "<span class=\"fa fa-lock icon pull-right\">   Open</span>");
+        } else {
+            $("#ListOfGyms div").last().append("<h4><span class=\"fa fa-map-marker icon\"></span>" + iTeam.Club + ' - ' + iTeam.Team + "</h4>" + iTeam.Gym + "<span class=\"fa fa-lock icon pull-right\">   Open</span>");
+        }
+    }
+    //console.log(">> addTeamToPage -completed <<");
+}
+var infowindow;
+
+function addTeamsToMap(lTeams) {
+    var geocoder = new google.maps.Geocoder();
+    var markerBounds = new google.maps.LatLngBounds();
+    var mapOptions = {
+        center: myLondonLocation,
+        zoom: 10
+    };
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+    $.each(lTeams, function(i, lTeam) {
+        var lGymLocation = new google.maps.LatLng(lTeam.latitude, lTeam.longitude);
+        var lMarkerURL = 'images/marker1.png';
+        if (lTeam.Club == '') {
+            lMarkerURL = 'images/pin-gym.png';
+        } else if (lTeam.Court == "Beach") {
+            lMarkerURL = 'images/pin-beach.png';
+        } else if (lTeam.Court == "Indoor") {
+            lMarkerURL = 'images/pin-indoor.png';
+        }
+        var marker = new google.maps.Marker({
+            map: map,
+            position: lGymLocation,
+            icon: lMarkerURL,
+            title: 'club name' + lTeam.Club + ' - ' + lTeam.Team
+        });
+
+        var div = document.createElement('DIV');
+        var lInfoWindowText = lTeam.Club + ' - ' + lTeam.Team + '<p> <p> <strong>Address: </strong>' + lTeam.Gym + '<br>' + lTeam.Address + '<br>' + lTeam.Area + '<br>' + lTeam.PostCode;
+        if (lTeam.Trainings) {
+            lInfoWindowText = lInfoWindowText + '<p style="margin: 0;"> <strong>Trainings: </strong>';
+
+            for (lTraining in lTeam.Trainings) {
+                if (lTeam.Trainings[lTraining] != '') {
+                    lInfoWindowText = lInfoWindowText + '<p style="margin: 0;">' + lTraining + ': ' + lTeam.Trainings[lTraining];
+                }
+            }
+        }
+        div.innerHTML = lInfoWindowText;
+
+        google.maps.event.addListener(marker, 'click', function() {
+            if (typeof infoBubble != 'undefined') infoBubble.close();
+            infoBubble = new InfoBubble({
+                maxWidth: 300
+            });
+            infoBubble.addTab(lTeam.Club + ' - ' + lTeam.Team, div);
+            infoBubble.open(map, marker);
+        });
+
+        /*
+			google.maps.event.addListener(marker, 'click', function() {
+		 		var lInfoWindow = lTeam.Club + ' - ' + lTeam.Team + '<p> <p> <strong>Address: </strong>' + lTeam.Gym + '<br>' + lTeam.Address + '<br>' + lTeam.Area + '<br>' + lTeam.PostCode;
+		 		if (lTeam.Trainings){
+		 			lInfoWindow = lInfoWindow + '<p style="margin: 0;"> <strong>Trainings: </strong>';
+
+		 			for ( lTraining in lTeam.Trainings ) {
+			 			if (lTeam.Trainings[lTraining] != '') {
+			 				lInfoWindow = lInfoWindow + '<p style="margin: 0;">' + lTraining + ': ' + lTeam.Trainings[lTraining];
+			 			}
+		 			}
+		 		}
+		 		if (infowindow) infowindow.close();
+				infowindow = new google.maps.InfoWindow({
+	   				content: lInfoWindow
+					});
+				infowindow.open(map,marker);
+			});
+			*/
+        markerBounds.extend(lGymLocation);
+        map.fitBounds(markerBounds);
+    });
+}inner
+var mMarkers = new Map();
+
+function addToMap(iTeam) {
+    var lGymLocation = new google.maps.LatLng(iTeam.latitude, iTeam.longitude);
+    var geocoder = new google.maps.Geocoder();
+    var lMarkerURL = 'images/marker1.png';
+    if (iTeam.Club == '') {
+        lMarkerURL = 'images/pin-gym.png';
+    } else if (iTeam.Court == "Beach") {
+        lMarkerURL = 'images/pin-beach.png';
+    } else if (iTeam.Court == "Indoor") {
+        lMarkerURL = 'images/pin-indoor.png';
+    }
+    var lGymName = iTeam.gym;
+    var marker;
+    if (typeof mMarkers.get(lGymName) != 'undefined') {
+    	marker = mMarkers.get(lGymName);
+    } else {
+        marker = new google.maps.Marker({
+            map: map,
+            position: lGymLocation,
+            icon: lMarkerURL,
+            title: 'club name' + iTeam.Club + ' - ' + iTeam.Team
+        });
+        var lInfoWindow = iTeam.Club + ' - ' + iTeam.Team + '<p> <p> <strong>Address: </strong>'
+        	+ iTeam.Gym + '<br>' + iTeam.Address + '<br>' + iTeam.Area + '<br>' + iTeam.PostCode;
+        if (iTeam.Trainings) {
+            lInfoWindow = lInfoWindow + '<p style="margin: 0;"> <strong>Trainings: </strong>';
+
+            for (lTraining in iTeam.Trainings) {
+                if (iTeam.Trainings[lTraining] != '') {
+                    lInfoWindow = lInfoWindow + '<p style="margin: 0;">' + lTraining + ': ' + iTeam.Trainings[lTraining];
+                }
+            }
+        }
+        mMarkers.set(lGymName, marker);
+    }
+    google.maps.event.addListener(marker, 'click', function() {
+        
+        if (infowindow) infowindow.close();
+        infowindow = new google.maps.InfoWindow({
+            content: lInfoWindow
+        });
+        infowindow.open(map, marker);
+    });
+    var mapOptions = {
+        center: lGymLocation,
+        zoom: 15
+    };
+
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    marker.setMap(map);
+}
+/*
+ * 
+ {
+ 
+     "team": "Men 1",
+     "club": "Wapping Wildcats",
+     "court": "Indoor",
+     "competition": "Div 1",
+     "gender": "Men",
+     "gym": "Mulberry School of Girls",
+     "logourl": "http://www.mountsivolleyball.com/graphics/site/cat_logo.jpg",
+     "adr": "Richard Street & Commercial Road E12JP",
+     "postcode": "E12",
+     "longitude": 51.5147011,
+     "latitude": -0.06032660000005308
+}
+ */
+    
+</script>
+
+<style>
+    .gmnoprint img {
+        max-width: none;
+    }
+
+    .panel:hover {
+        background-color: rgb(237, 245, 252);
+    }
+
+    .map {
+        min-width: 300px;
+        min-height: 470px;
+        width: 100%;
+        height: 100%;
+    }
+
+    img {
+        max-width: 110%;
+        height: auto;
+    }
+
+    .clearfix {
+        clear: both;
+    }
+
+    .rowcolor {
+        background-color: #CCCCCC;
+    }
+
+    .padall {
+        padding: 10px;
+    }
+
+    .padbig {
+        padding: 20px;
+    }
+
+    .icon {
+        font-size: 23px;
+        color: #197BB5;
+    }
+</style>
+
+
+
+<link rel="stylesheet" href="css/swipebox.css">
+	<script src="js/jquery.swipebox.min.js"></script> 
+	    <script type="text/javascript">
+			jQuery(function($) {
+				$(".swipebox").swipebox();
+			});
+		</script>
+	<!-- Portfolio Ends Here -->
+	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+<script type="text/javascript">
+$(function () {
+	
+	var filterList = {
+	
+		init: function () {
+		
+			// MixItUp plugin
+		// http://mixitup.io
+		$('#portfoliolist').mixitup({
+			targetSelector: '.portfolio',
+			filterSelector: '.filter',
+			effects: ['fade'],
+			easing: 'snap',
+			// call the hover effect
+			onMixEnd: filterList.hoverEffect()
+		});				
+	
+	},
+	
+	hoverEffect: function () {
+	
+		// Simple parallax effect
+		$('#portfoliolist .portfolio').hover(
+			function () {
+				$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+				$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+			},
+			function () {
+				$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+				$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+			}		
+		);				
+	
+	}
+
+};
+
+// Run the show!
+	filterList.init();
+	
+});	
+</script>
+	</div>
+<!--Footer-Starts-Here-->
+	<div class="footer">
+		<div class="conatiner">
+			<div class="footer-text wow bounce" data-wow-delay="0.1s">
+				<p>Site by David Ureña</p>
+				<ul> 
+					<li><a href="http://www.sideout.co.uk"><img style="max-width: 100px" src="http://static.wixstatic.com/media/a1273a_8da2cf9ad838df602cf9284a425ac0af.jpg_srb_p_365_216_75_22_0.50_1.20_0.00_jpg_srb"></a></li>
+					<li><a href="http://www.londonvolleyball.org.uk"> <img style="max-width: 100px" src="http://www.londonvolleyball.org.uk/themes/avalon/img/header_logo_lva.png"></a></li>
+					<li><a href="https://www.volleyballengland.org"><img style="max-width: 100px" src="https://www.volleyballengland.org/~media/images/imagesource.php?image=204.jpg&maxwidth=206"></a></li>
+				</ul>
+			</div>
+		</div>
+		 <script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	</div>
+<!--Footer-Ends-Here-->
+</body>
+</html>
