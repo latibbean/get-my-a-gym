@@ -22,8 +22,7 @@ body {
   width: 90%;
   height: 80%;
   display: inline-block;
-  margin-left: 5%;
-  margin: 0 auto;
+  margin: 0 auto auto 5%;
   background: #DEDEDE;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
