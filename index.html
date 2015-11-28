@@ -219,15 +219,15 @@ reset Map</button>
     	 $.each( data, function( i, item ) {
  			if (item.Court=='Beach') {
  				if ($('#rdBeach').prop('checked')==true) {
- 					var lMarker = L.marker([item.latitude, item.longitude], {icon:volleyBeachIcon})//.addTo(map)
-             			.bindPopup("<b>" + item.Gym + "</b><br />" + item.Address+ "</b><br />" + item.Court + "</b><br />" + item.Info); 
+ 					var lMarker = L.marker([item.latitude, item.longitude], {icon:volleyBeachIcon}) //.addTo(map)
+             			.bindPopup("<b>" + item.Gym + "</b><br />Address: " + item.Address + ",  " + item.PostCode + "<br/>Court: " + item.Court + "<br/><br/>" + item.Info); 
  	        		markers.addLayer(lMarker);
  	    			addGymToPage(item, i);           
  		        }
  			} else if (item.Court=='Indoor') {
  				if ($('#rdIndoor').prop('checked')==true) {
- 					var lMarker = L.marker([item.latitude, item.longitude], {icon:volleyIcon})//.addTo(map)
-         				.bindPopup("<b>" + item.Gym + "</b><br />" + item.Address+ "</b><br />" + item.Court + "</b><br />" + item.Info); 
+ 					var lMarker = L.marker([item.latitude, item.longitude], {icon:volleyIcon}) //.addTo(map)
+         				.bindPopup("<b>" + item.Gym + "</b><br />Address: " + item.Address + ",  " + item.PostCode + "<br/>Court: " + item.Court + "<br/><br/>" + item.Info); 
  					markers.addLayer(lMarker);
  	 	    		addGymToPage(item, i);           
       			}
