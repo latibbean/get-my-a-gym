@@ -288,14 +288,14 @@
  					var lMarker = L.marker([item.latitude, item.longitude], {icon:volleyBeachIcon}) //.addTo(map)
              			.bindPopup("<b>" + item.Gym + "</b><br />Address: " + item.Address + ",  " + item.PostCode + "<br/>Court: " + item.Court + "<br/><br/>" + item.Info); 
  	        		markers.addLayer(lMarker);
- 	    			addGymToPage(item, i);           
+ 	    			//TODO: addGymToPage(item, i);           
  		        }
  			} else if (item.Court=='Indoor') {
  				if ($('#rdIndoor').prop('checked')==true) {
  					var lMarker = L.marker([item.latitude, item.longitude], {icon:volleyIcon}) //.addTo(map)
          				.bindPopup("<b>" + item.Gym + "</b><br />Address: " + item.Address + ",  " + item.PostCode + "<br/>Court: " + item.Court + "<br/><br/>" + item.Info); 
  					markers.addLayer(lMarker);
- 	 	    		addGymToPage(item, i);           
+ 	 	    		//TODO: addGymToPage(item, i);           
       			}
  			}
        	});
