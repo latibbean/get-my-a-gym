@@ -75,13 +75,13 @@
   <body style="background-color: rgb(108, 121, 137);">
     <div class="wrapper" style="width: 90%">
       <header class="without-description">
-        <h1>Team Finder</h1>
+        <h1>I just want to play Volleyball</h1>
         <p></p>
-        <p class="view"><a href="./index.html">Volleyball in London</small></a></p>
+        <p class="view"><a href="./about.html">About this page</a></p>
         <ul>
           <!--li><a href="https://github.com/latibbean/get-my-a-gym/zipball/master">Download <strong>ZIP File</strong></a></li>
           <li><a href="https://github.com/latibbean/get-my-a-gym/tarball/master">Download <strong>TAR Ball</strong></a></li-->
-          <li><a href="./index.html">Volleyball in London</a></li>
+          <li><a href="./about.html">About <br>this page</a></li>
         </ul>
       </header>
       <section>
@@ -95,13 +95,13 @@
 <div id="map" class="map" style="min-height: 600px"></div>
 </div>
 </div>
-<div style="text-align: center">
-<div class="panel panel-primary" style="display: inline-table; margin-top: 10px">
-<div class="panel-heading">
-<h3 class="panel-title">Filter</h3>
-</div>
 
-<div class="panel-body">
+<div style="text-align: center">
+	<div class="panel panel-primary" style="display: inline-table; margin-top: 10px">
+		<div class="panel-heading">
+			<h3 class="panel-title">Filter Team</h3>
+		</div>
+		<div class="panel-body">
 		<div class="btn-group padall" data-toggle="buttons">
 	  		<label class="btn btn-primary btn-filter active">
 	    		<input class="btn-filter" type="checkbox" autocomplete="off" id="rdIndoor" checked="true"> Indoor
@@ -170,13 +170,11 @@
 	  		</label>
 		</div>
 	
-	<br>
-	<div class="btn-group padbig" data-toggle="buttons">
-		<button type="button" id="resetButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">Apply filter and reset Map</button>
+			<div class="btn-group padbig" data-toggle="buttons">
+				<button type="button" id="resetButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">Apply filter and reset Map</button>
+			</div>
+		</div>
 	</div>
-</div>
-
-</div>
 </div>
 
 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 "
@@ -215,7 +213,7 @@
 
 <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
 
-<script type="text/javascript"><!--
+<script type="text/javascript">
 	var latLondon = 51.5286416;
 	var lngLondon = -0.1015987;
 	var myLondonLocation = new google.maps.LatLng(latLondon, lngLondon);
@@ -288,21 +286,21 @@
  					var lMarker = L.marker([item.latitude, item.longitude], {icon:volleyBeachIcon}) //.addTo(map)
              			.bindPopup("<b>" + item.Gym + "</b><br />Address: " + item.Address + ",  " + item.PostCode + "<br/>Court: " + item.Court + "<br/><br/>" + item.Info); 
  	        		markers.addLayer(lMarker);
- 	    			//TODO: addGymToPage(item, i);           
+ 	    			addGymToPage(item, i);           
  		        }
  			} else if (item.Court=='Indoor') {
  				if ($('#rdIndoor').prop('checked')==true) {
  					var lMarker = L.marker([item.latitude, item.longitude], {icon:volleyIcon}) //.addTo(map)
          				.bindPopup("<b>" + item.Gym + "</b><br />Address: " + item.Address + ",  " + item.PostCode + "<br/>Court: " + item.Court + "<br/><br/>" + item.Info); 
  					markers.addLayer(lMarker);
- 	 	    		//TODO: addGymToPage(item, i);           
+ 	 	    		addGymToPage(item, i);           
       			}
  			}
        	});
 
 		map.addLayer(markers);
 
-/*		function addGymToPage(iGym, i) {
+		function addGymToPage(iGym, i) {
 			if ($.inArray(iGym.Gym, mGymsInList) >= 0) {
 				return;
 			} else {
@@ -353,69 +351,9 @@
  	            $("#ListOfGyms div").last().addClass("pull-right").text(iGym.Area);
 			}
 		}
-*/
-		function addTeamToPage(iTeam, i, iClubsInList) {
-
-		    //console.log(">> addTeamToPage [" + iTeam.Team + "] <<");
-		    if ($.inArray(iTeam.Club + ' - ' + iTeam.Team, iClubsInList) >= 0) {
-		        //console.log(">> club already in");
-		        return;
-		    } else {
-		        // console.log(iTeam.club + ' - ' + iTeam.team);
-		        iClubsInList.push(iTeam.Club + ' - ' + iTeam.Team);
-
-		        $("#ListOfGyms").last().append("<div>");
-		        $("#ListOfGyms div").last().addClass("row");
-		        $("#ListOfGyms div").last().append("<div>");
-		        $("#ListOfGyms div").last().addClass("col-xs-12 col-sm-12 col-md-12 col-lg-12");
-
-
-		        $("#ListOfGyms div").last().append("<div>")
-
-		        $("#ListOfGyms div").last().addClass("panel").addClass("panel-default");
-		        $("#ListOfGyms div").last().bind("click", function() {
-		            //alert( "User clicked on: " + iTeam.gym);
-		            addToMap(iTeam);
-		        });
-
-		        $("#ListOfGyms div").last().append("<div>");
-		        $("#ListOfGyms div").last().addClass("row").addClass("padall");
-
-		        $("#ListOfGyms div").last().append("<div>");
-		        $("#ListOfGyms div").last().addClass("col-xs-12 col-sm-12 col-md-3 col-lg-3");
-		        if (iTeam.logourl == "") {
-		            $("#ListOfGyms div").last().append("<img src=\"http://www.sportfactor.net/v/vspfiles/photos/MVA200-2.jpg\">");
-		        } else {
-		            $("#ListOfGyms div").last().append("<img src=\"" + iTeam.logourl + "\">");
-		        }
-
-		        $("#ListOfGyms div").last().parent().last().append("<div>");
-		        $("#ListOfGyms div").last().addClass("col-xs-12 col-sm-12 col-md-9 col-lg-9");
-		        $("#ListOfGyms div").last().append("<div>");
-		        $("#ListOfGyms div").last().addClass("clearfix").append("<div>")
-		        $("#ListOfGyms div").last().addClass("pull-left");
-
-		        // Adding Name
-		        $("#ListOfGyms div").last().parent().last().append("<div>");
-		        $("#ListOfGyms div").last().addClass("pull-right");
-		        if (iTeam.Competition == '') {
-		            $("#ListOfGyms div").last().text(iTeam.Court);
-		        } else {
-		            $("#ListOfGyms div").last().text(iTeam.Competition + " | " + iTeam.Gender + " | " + iTeam.Court);
-		        }
-
-		        //$("#ListOfGyms div").last().parent().last().parent().append("<div>");
-		        if (iTeam.Club == '') {
-		            $("#ListOfGyms div").last().append("<h4><span class=\"fa fa-map-marker icon\"></span>" + iTeam.Team + "</h4>" + iTeam.Gym + "<span class=\"fa fa-lock icon pull-right\">   Open</span>");
-		        } else {
-		            $("#ListOfGyms div").last().append("<h4><span class=\"fa fa-map-marker icon\"></span>" + iTeam.Club + ' - ' + iTeam.Team + "</h4>" + iTeam.Gym + "<span class=\"fa fa-lock icon pull-right\">   Open</span>");
-		        }
-		    }
-		    //console.log(">> addTeamToPage -completed <<");
-		}
 		map.invalidateSize();
 	}
---></script>
+</script>
       </section>
     </div>
     <footer>
