@@ -134,37 +134,68 @@
 			      console.log( data );
 	  	    	 $.each( data, function( i, item ) {
 	  	    	      console.log('processing ' + i);
-			  	    	 
-		  	  		 $("#ListOfAdds").append("<div>");
-		  	         var $lAddLine = $("#ListOfAdds div").last();
-		  	         $lAddLine.attr("id", item.add_id + "_1").addClass("col-xs-12").addClass("col-sm-12").addClass("col-md-12 col-lg-12");
-		  	         
-		  	         
-		  	         $lAddLine.append("<div>")
-		  	         var $lGymPanel = $("#ListOfAdds div").last();
-		  	         //console.log($lGymPanel);
-		  	         $lGymPanel.attr("id", item.add_id + "_2").addClass("panel").addClass("panel-default");
-		
-		  			 $lGymPanel.append("<div>");
-		  	         var $lGymPanelSub =  $("#ListOfAdds div").last().attr("id", item.add_id + "_3").addClass("row").addClass("padall");
-		
-		  	         $lGymPanelSub.append("<div>");
-		  	         var $lGymPanelSub2 = $("#ListOfAdds div").last().attr("id", item.add_id + "_4").addClass("col-xs-12").addClass("col-sm-12").addClass("col-md-12").addClass("col-lg-12");
-		
-		  	         $lGymPanelSub2.append("<div>");
-		  	         var $lGymPanel21 = $("#ListOfAdds div").last().attr("id", item.add_id + "_5").addClass("clearfix").append("<div>");//.addClass("pull-left");
-		
-		  	         // Adding Name
-		  	         $lGymPanel21.append("<span>");
-		  	         $("#ListOfAdds div").last().addClass("icon").text(item.team);
-		
-		  	         //Adding PostCode
-		  	         $lGymPanel21.append("<div>");
-		  	         $("#ListOfAdds div").last().addClass("pull-left").text(item.positions);
-		
-		  	         //Adding Area
-		  	         $lGymPanel21.append("<div>");
-		  	         $("#ListOfAdds div").last().addClass("pull-right").text(item.Area);   	 
+			  	     if (item.Gender == 'Men') {
+			  	  		 $("#ListOfAddsMen").append("<div>");
+			  	         var $lAddLine = $("#ListOfAddsMen div").last();
+			  	         $lAddLine.attr("id", item.add_id + "_1").addClass("col-xs-12").addClass("col-sm-12").addClass("col-md-12 col-lg-12");
+			  	         
+			  	         $lAddLine.append("<div>")
+			  	         var $lGymPanel = $("#ListOfAddsMen div").last();
+			  	         //console.log($lGymPanel);
+			  	         $lGymPanel.attr("id", item.add_id + "_2").addClass("panel").addClass("panel-default");
+			
+			  			 $lGymPanel.append("<div>");
+			  	         var $lGymPanelSub =  $("#ListOfAddsMen div").last().attr("id", item.add_id + "_3").addClass("row").addClass("padall");
+			
+			  	         $lGymPanelSub.append("<div>");
+			  	         var $lGymPanelSub2 = $("#ListOfAddsMen div").last().attr("id", item.add_id + "_4").addClass("col-xs-12").addClass("col-sm-12").addClass("col-md-12").addClass("col-lg-12");
+			
+			  	         $lGymPanelSub2.append("<div>");
+			  	         var $lGymPanel21 = $("#ListOfAddsMen div").last().attr("id", item.add_id + "_5").addClass("clearfix").append("<div>");//.addClass("pull-left");
+			
+			  	         // Adding Name
+			  	         $lGymPanel21.append("<span>");
+			  	         $("#ListOfAddsMen div").last().addClass("icon").text(item.team);
+			
+			  	         //Adding PostCode
+			  	         $lGymPanel21.append("<div>");
+			  	         $("#ListOfAddsMen div").last().addClass("pull-left").text(item.positions);
+			
+			  	         //Adding Area
+			  	         $lGymPanel21.append("<div>");
+			  	         $("#ListOfAddsMen div").last().addClass("pull-right").text(item.Area);   	 
+			  	     } else {
+			  	  		 $("#ListOfAdds").append("<div>");
+			  	         var $lAddLine = $("#ListOfAdds div").last();
+			  	         $lAddLine.attr("id", item.add_id + "_1").addClass("col-xs-12").addClass("col-sm-12").addClass("col-md-12 col-lg-12");
+			  	         
+			  	         
+			  	         $lAddLine.append("<div>")
+			  	         var $lGymPanel = $("#ListOfAdds div").last();
+			  	         //console.log($lGymPanel);
+			  	         $lGymPanel.attr("id", item.add_id + "_2").addClass("panel").addClass("panel-default");
+			
+			  			 $lGymPanel.append("<div>");
+			  	         var $lGymPanelSub =  $("#ListOfAdds div").last().attr("id", item.add_id + "_3").addClass("row").addClass("padall");
+			
+			  	         $lGymPanelSub.append("<div>");
+			  	         var $lGymPanelSub2 = $("#ListOfAdds div").last().attr("id", item.add_id + "_4").addClass("col-xs-12").addClass("col-sm-12").addClass("col-md-12").addClass("col-lg-12");
+			
+			  	         $lGymPanelSub2.append("<div>");
+			  	         var $lGymPanel21 = $("#ListOfAdds div").last().attr("id", item.add_id + "_5").addClass("clearfix").append("<div>");//.addClass("pull-left");
+			
+			  	         // Adding Name
+			  	         $lGymPanel21.append("<span>");
+			  	         $("#ListOfAdds div").last().addClass("icon").text(item.team);
+			
+			  	         //Adding PostCode
+			  	         $lGymPanel21.append("<div>");
+			  	         $("#ListOfAdds div").last().addClass("pull-left").text(item.positions);
+			
+			  	         //Adding Area
+			  	         $lGymPanel21.append("<div>");
+			  	         $("#ListOfAdds div").last().addClass("pull-right").text(item.Area);   	 
+			  	     }
 	  	       	});
 	  		});
 		      console.log('end');
