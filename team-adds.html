@@ -84,13 +84,13 @@
         <h1>Let's find a Club to play Volleyball</h1>
         <h0>--{ Work in Progress }--</h0>
         <p></p>
+        <p class="view"><a href="./index.html">Find a <br> Court</a></p>
         <p class="view"><a href="./team-finder.html">Find a <br> Club</a></p>
-        <p class="view"><a href="./index.html">Find a <br> court</a></p>
         <p class="view"><a href="./about.html">About this page</a></p>
         <ul>
           <!--li><a href="https://github.com/latibbean/get-my-a-gym/zipball/master">Download <strong>ZIP File</strong></a></li>
           <li><a href="https://github.com/latibbean/get-my-a-gym/tarball/master">Download <strong>TAR Ball</strong></a></li-->
-          <li><a href="./index.html">Find a  <br> court</a></li>
+          <li><a href="./index.html">Find a  <br> Court</a></li>
           <li><a href="./team-finder.html">Find a  <br> Club</a></li>
           <li><a href="./about.html">About <br>this page</a></li>
         </ul>
@@ -98,21 +98,21 @@
       <section>
 		<div class="container" id="gym" style="max-height: 800px; margin-right: 10px; margin-left: 10px; display: table-row">
 			<div class="row padbig">	
-				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-					<div class="row">
-						<div id="map" class="map" style="min-height: 600px">
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 "
+					style="overflow: scroll; max-height: 357px; margin-bottom: 5%" id="ListOfAddsMen">
+					<div class="panel panel-primary" style="display: table; margin-top: 10px">
+						<div class="panel-heading">
+							<h3 class="panel-title">Team adds (Men)</h3>
 						</div>
 					</div>
 				</div>
 				
-				<div style="text-align: center">
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 "
+					style="overflow: scroll; max-height: 357px; margin-bottom: 5%" id="ListOfAdds">
 					<div class="panel panel-primary" style="display: table; margin-top: 10px">
 						<div class="panel-heading">
-							<h3 class="panel-title">Team adds</h3>
+							<h3 class="panel-title">Team adds (Women)</h3>
 						</div>
-					</div>
-					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 "
-						style="overflow: scroll; max-height: 357px; margin-bottom: 5%" id="ListOfAdds">
 					</div>
 				</div>
 			</div>
@@ -124,45 +124,49 @@
       	AddID: 
         
       */
-  	var myData;
-  	$.getJSON("adds.json", function(data) {
-  		//Do nothing here?
-  		}).done(function(data) {
-  		// data is a JavaScript object now. Handle it as such
-  	    	 $.each( data, function( i, item ) {
-	  	  		 $("#ListOfAdds").append("<div>");
-	  	         var $lAddLine = $("#ListOfAdds div").last();
-	  	         $lAddLine.attr("id", item.add_id + "_1").addClass("col-xs-12").addClass("col-sm-12").addClass("col-md-12 col-lg-12");
-	  	         
-	  	         
-	  	         $lAddLine.append("<div>")
-	  	         var $lGymPanel = $("#ListOfAdds div").last();
-	  	         //console.log($lGymPanel);
-	  	         $lGymPanel.attr("id", item.add_id + "_2").addClass("panel").addClass("panel-default");
-	
-	  			 $lGymPanel.append("<div>");
-	  	         var $lGymPanelSub =  $("#ListOfAdds div").last().attr("id", item.add_id + "_3").addClass("row").addClass("padall");
-	
-	  	         $lGymPanelSub.append("<div>");
-	  	         var $lGymPanelSub2 = $("#ListOfAdds div").last().attr("id", item.add_id + "_4").addClass("col-xs-12").addClass("col-sm-12").addClass("col-md-12").addClass("col-lg-12");
-	
-	  	         $lGymPanelSub2.append("<div>");
-	  	         var $lGymPanel21 = $("#ListOfAdds div").last().attr("id", item.add_id + "_5").addClass("clearfix").append("<div>");//.addClass("pull-left");
-	
-	  	         // Adding Name
-	  	         $lGymPanel21.append("<span>");
-	  	         $("#ListOfAdds div").last().addClass("icon").text(item.team);
-	
-	  	         //Adding PostCode
-	  	         $lGymPanel21.append("<div>");
-	  	         $("#ListOfAdds div").last().addClass("pull-left").text(item.positions);
-	
-	  	         //Adding Area
-	  	         $lGymPanel21.append("<div>");
-	  	         $("#ListOfAdds div").last().addClass("pull-right").text(iGym.Area);   	 
-  	       	});
-  		});
-        	
+      console.log('start');
+		  	var myData;
+		  	$.getJSON("adds.json", function(data) {
+		  		//Do nothing here?
+	  		}).done(function(data) {
+	  		// data is a JavaScript object now. Handle it as such
+	  	    	 $.each( data, function( i, item ) {
+	  	    	      console.log('processing ' + i);
+			  	    	 
+		  	  		 $("#ListOfAdds").append("<div>");
+		  	         var $lAddLine = $("#ListOfAdds div").last();
+		  	         $lAddLine.attr("id", item.add_id + "_1").addClass("col-xs-12").addClass("col-sm-12").addClass("col-md-12 col-lg-12");
+		  	         
+		  	         
+		  	         $lAddLine.append("<div>")
+		  	         var $lGymPanel = $("#ListOfAdds div").last();
+		  	         //console.log($lGymPanel);
+		  	         $lGymPanel.attr("id", item.add_id + "_2").addClass("panel").addClass("panel-default");
+		
+		  			 $lGymPanel.append("<div>");
+		  	         var $lGymPanelSub =  $("#ListOfAdds div").last().attr("id", item.add_id + "_3").addClass("row").addClass("padall");
+		
+		  	         $lGymPanelSub.append("<div>");
+		  	         var $lGymPanelSub2 = $("#ListOfAdds div").last().attr("id", item.add_id + "_4").addClass("col-xs-12").addClass("col-sm-12").addClass("col-md-12").addClass("col-lg-12");
+		
+		  	         $lGymPanelSub2.append("<div>");
+		  	         var $lGymPanel21 = $("#ListOfAdds div").last().attr("id", item.add_id + "_5").addClass("clearfix").append("<div>");//.addClass("pull-left");
+		
+		  	         // Adding Name
+		  	         $lGymPanel21.append("<span>");
+		  	         $("#ListOfAdds div").last().addClass("icon").text(item.team);
+		
+		  	         //Adding PostCode
+		  	         $lGymPanel21.append("<div>");
+		  	         $("#ListOfAdds div").last().addClass("pull-left").text(item.positions);
+		
+		  	         //Adding Area
+		  	         $lGymPanel21.append("<div>");
+		  	         $("#ListOfAdds div").last().addClass("pull-right").text(iGym.Area);   	 
+	  	       	});
+	  		});
+		      console.log('end');
+		        	
       </script>
       
       
